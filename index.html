@@ -540,6 +540,39 @@
       opacity: 0.65;
     }
 
+    /* TEMPLATE SIGNUP */
+    #template {
+      background: var(--red);
+      text-align: center;
+    }
+
+    #template .section-inner { max-width: 680px; margin: 0 auto; }
+
+    #template .eyebrow { color: var(--cream); opacity: 0.85; }
+
+    #template h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    #template p {
+      color: var(--cream);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-cream {
+      background: var(--cream);
+      color: var(--black);
+      border-color: var(--cream);
+    }
+
+    .btn-cream:hover {
+      background: transparent;
+      color: var(--cream);
+    }
+
     /* CONTACT */
     #contact {
       border-top: 1px solid rgba(240, 235, 224, 0.1);
@@ -642,6 +675,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#template">Free Template</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -705,6 +739,16 @@
         <blockquote>"Instead of giving me the answers the study buddy gave me hints to further answer the question."</blockquote>
         <figcaption>A student, on a teacher-built study app</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <!-- TEMPLATE SIGNUP -->
+  <section id="template">
+    <div class="section-inner">
+      <p class="eyebrow">Free Template</p>
+      <h2>Vet your AI tools without starting from scratch.</h2>
+      <p>Get my free AI tool vetting template, built from the process I used to audit 301 tools at one school. It arrives in your inbox December 1.</p>
+      <a href="https://danifilas.substack.com/subscribe" class="btn btn-cream" target="_blank" rel="noopener">Get the Free Template</a>
     </div>
   </section>
 
