@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Filasophy.ai</title>
+  <link rel="icon" type="image/svg+xml" href="assets/filasophy-phi-app-icon.svg" />
+  <link rel="icon" type="image/png" href="assets/filasophy-phi-app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/filasophy-phi-app-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -59,6 +62,47 @@
     }
 
     .nav-logo span { color: var(--blush); }
+
+    .nav-logo img { height: 30px; width: auto; display: block; }
+
+    .hero-case-link {
+      display: inline-block;
+      margin-left: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--blush);
+      border-bottom: 1px solid rgba(242, 160, 160, 0.5);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .hero-case-link:hover { color: var(--cream); border-color: var(--cream); }
+
+    .recognition {
+      margin-top: 2.5rem;
+    }
+
+    .recognition .eyebrow { margin-bottom: 0.75rem; }
+
+    .recognition p {
+      color: var(--cream);
+      opacity: 0.8;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .recognition strong { color: var(--cream); font-weight: 600; }
+
+    .writing-list {
+      list-style: none;
+      color: var(--cream);
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+
+    .writing-list em { font-family: 'Playfair Display', serif; font-style: italic; }
+
+    footer .foot-logo img { height: 22px; width: auto; display: block; opacity: 0.6; }
 
     nav ul {
       list-style: none;
@@ -502,6 +546,8 @@
     @media (max-width: 768px) {
       nav ul { display: none; }
 
+      #hero .hero-case-link { display: block; width: fit-content; margin: 1.25rem 0 0; }
+
       #about .section-inner,
       #speaking .section-inner,
       #testimonials .section-inner {
@@ -531,7 +577,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#hero" class="nav-logo">Filas<span>ophy.ai</span></a>
+    <a href="#hero" class="nav-logo"><img src="assets/filasophy-logo-reversed.svg" alt="Filasophy" /></a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -547,6 +593,7 @@
       <h1 class="hero-headline">Our world is in <span class="accent">beta.</span><br>(And it always will be.)</h1>
       <p class="hero-sub">Let's get comfortable with that.</p>
       <a href="#contact" class="btn">Let's Work Together</a>
+      <a href="vetting.html" class="hero-case-link">See how I rebuilt one school's tool vetting</a>
     </div>
   </section>
 
@@ -580,27 +627,41 @@
 
         <div class="service-card">
           <div class="service-number">01</div>
+          <h3>AI Tool Vetting &amp; Governance</h3>
+          <p class="service-tagline">For schools adding AI tools faster than anyone can track them</p>
+          <p>Most schools can't say which apps students use, who approved them, or what data those apps collect. I fix that. Together we audit what you already run, build approval criteria your staff will actually use, and set up a review cycle that keeps working after I leave. You get a living inventory, a clear approval process, and the people trained to run it. <a href="vetting.html" class="hero-case-link" style="margin-left:0;">Read the case study</a></p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Adoption Measurement</h3>
+          <p class="service-tagline">For leaders who need evidence for their board, their budget, or themselves</p>
+          <p>Usage numbers tell you people logged in; they don't tell you whether anything changed. I design a baseline study before your AI rollout, then measure again after training and support, so you see what moved and what didn't. You get a findings report, a professional learning plan built from the results, and a second measurement six to nine months later. Your data stays yours.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
           <h3>Keynotes &amp; Speaking</h3>
           <p class="service-tagline">For conferences, schools &amp; organizations</p>
           <p>I don't do hype. I do real talk about where we are, what's actually changing, and how to move forward without losing what makes education human. Audiences leave with a framework they built in the room, not a pdf they'll never open again.</p>
         </div>
 
         <div class="service-card">
-          <div class="service-number">02</div>
+          <div class="service-number">04</div>
           <h3>AI Playground: Professional Development</h3>
           <p class="service-tagline">Full-day &amp; half-day workshops</p>
           <p>The Playground is where we try things, break things, and figure out what actually works for your school. An honest exploration with a guide who's been in your seat.</p>
         </div>
 
         <div class="service-card">
-          <div class="service-number">03</div>
+          <div class="service-number">05</div>
           <h3>AI Strategy Consulting</h3>
           <p class="service-tagline">For schools ready to move from "should we?" to "how do we?"</p>
           <p>We'll map where you are, where you want to go, and build guidelines that fit your culture, your constraints, and your people. No template. No borrowed playbook. We're making the map as we go, together.</p>
         </div>
 
         <div class="service-card">
-          <div class="service-number">04</div>
+          <div class="service-number">06</div>
           <h3>AI Coaching</h3>
           <p class="service-tagline">One-on-one, your specific questions</p>
           <p>Let's work through your specific questions, your specific worries, and your specific classroom. Not theory. Not a course. Just honest conversation about what's actually possible on a Tuesday.</p>
@@ -629,6 +690,19 @@
             <span class="venue-tag">Google Summits</span>
             <span class="venue-tag">Columbus Preparatory Academy</span>
           </div>
+        </div>
+
+        <div class="recognition">
+          <p class="eyebrow">Recognition</p>
+          <p><strong>Named one of The 100: Independent School Innovators 2026</strong> in AI and Emerging Technologies, recognized for building a school-wide AI and edtech vetting system. Presenting a poster session at The 100 Summit, November 2026.</p>
+        </div>
+
+        <div class="recognition">
+          <p class="eyebrow">Writing</p>
+          <ul class="writing-list">
+            <li><em>AI Shame</em>, The Worthy Educator, 2026</li>
+            <li><em>Skepticism as a Superpower</em>, NAIS Independent Ideas</li>
+          </ul>
         </div>
       </div>
 
@@ -689,7 +763,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <span class="foot-logo">Filas<span>ophy.ai</span></span>
+    <span class="foot-logo"><img src="assets/filasophy-logo-reversed.svg" alt="Filasophy" /></span>
     <p>&copy; 2026 Filasophy.ai — All rights reserved</p>
   </footer>
 

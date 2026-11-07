@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case study: AI tool vetting | Filasophy.ai</title>
+  <meta name="description" content="How one independent school went from no tool inventory to a working approval process: 301 tools audited, more than half removed." />
+  <link rel="icon" type="image/svg+xml" href="assets/filasophy-phi-app-icon.svg" />
+  <link rel="icon" type="image/png" href="assets/filasophy-phi-app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/filasophy-phi-app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --cream: #f0ebe0;
+      --red: #C01E1E;
+      --blush: #f2a0a0;
+    }
+
+    body {
+      background-color: var(--black);
+      color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    h1, h2 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 6vw;
+      background: #111111;
+      border-bottom: 1px solid rgba(240, 235, 224, 0.15);
+    }
+
+    nav img { height: 30px; width: auto; display: block; }
+
+    .back-link {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .back-link:hover { opacity: 1; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 9rem 6vw 6rem;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta.recognized { color: var(--blush); opacity: 1; }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--red);
+      margin: 2rem 0 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    main p {
+      opacity: 0.85;
+      font-size: 1.05rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2px;
+      margin: 1.5rem 0;
+    }
+
+    .stat {
+      border: 1px solid rgba(240, 235, 224, 0.12);
+      padding: 1.25rem;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-top: 0.35rem;
+    }
+
+    .takeaway {
+      margin-top: 3rem;
+      padding: 1.75rem 2rem;
+      border-left: 3px solid var(--red);
+      background: rgba(240, 235, 224, 0.04);
+    }
+
+    .takeaway p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      opacity: 1;
+    }
+
+    .cta {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .cta p { margin-bottom: 1.5rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--red);
+      color: var(--cream);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 2px solid var(--red);
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .btn:hover { background: transparent; color: var(--red); }
+
+    footer {
+      padding: 2rem 6vw;
+      border-top: 1px solid rgba(240, 235, 224, 0.08);
+      text-align: center;
+      font-size: 0.72rem;
+      opacity: 0.4;
+    }
+
+    @media (max-width: 600px) {
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html"><img src="assets/filasophy-logo-reversed.svg" alt="Filasophy home" /></a>
+    <a href="index.html#services" class="back-link">All services</a>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Case study</p>
+    <h1>From no inventory to a working approval process</h1>
+    <p class="meta">An independent school, three divisions</p>
+    <p class="meta recognized">Recognized by The 100: Independent School Innovators 2026</p>
+    <div class="divider"></div>
+
+    <h2>The problem</h2>
+    <p>No tool inventory, no shared criteria, no one in charge of approvals. Teachers downloaded what they liked; nobody could say what student data went where.</p>
+
+    <h2>The first attempt failed</h2>
+    <p>I built a detailed implementation guide, and teachers stopped using it. It asked for too many steps. I pulled it before the wider rollout. Every click you add costs you people.</p>
+
+    <h2>The rebuild</h2>
+    <p>I started over with less friction: one intake form, AI assistants that run the first privacy and fit review, and a tech team review for security and integration. Every decision gets logged with its conditions attached.</p>
+
+    <h2>The result</h2>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">301</div>
+        <div class="stat-label">tools audited</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">158</div>
+        <div class="stat-label">removed, rejected, or declined; more than half the stack</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">149</div>
+        <div class="stat-label">high-risk apps off student devices in one coordinated cleanup</div>
+      </div>
+    </div>
+    <p>Approved tools now carry review dates, grade-level limits, and a published safe-apps list for each grade.</p>
+
+    <div class="takeaway">
+      <p>What I'd tell another school: the first version of your process will be too heavy. Plan to cut it.</p>
+    </div>
+
+    <div class="cta">
+      <p>Want this for your school?</p>
+      <a href="mailto:dani@filasophy.ai" class="btn">Get In Touch</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Filasophy.ai. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
