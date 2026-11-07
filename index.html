@@ -274,6 +274,40 @@
       opacity: 1 !important;
     }
 
+    /* HOW WE WORK */
+    #how {
+      border-top: 1px solid rgba(240, 235, 224, 0.1);
+    }
+
+    #how .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    #how h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      color: var(--cream);
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.5rem;
+    }
+
+    .how-beat h3 {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--blush);
+      margin-bottom: 0.75rem;
+    }
+
+    .how-beat p {
+      color: var(--cream);
+      opacity: 0.8;
+      font-size: 0.98rem;
+    }
+
     /* SERVICES */
     #services {
       background: rgba(240, 235, 224, 0.03);
@@ -561,7 +595,8 @@
         margin: 0 auto;
       }
 
-      .services-grid {
+      .services-grid,
+      .how-grid {
         grid-template-columns: 1fr;
       }
 
@@ -612,6 +647,35 @@
         <p>If you're looking for a finished framework to download and plug in, keep scrolling. If you're looking for someone to help you build a compass that holds up when the next wave hits, let's talk.</p>
       </div>
       <img src="headshot.jpg" alt="Dani Filas" class="about-photo" />
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="how">
+    <div class="section-inner wide">
+      <div class="section-header">
+        <p class="eyebrow">How We Work</p>
+        <h2>Rules from the stage</h2>
+        <div class="divider" style="margin: 1.5rem auto 0;"></div>
+      </div>
+      <div class="how-grid">
+
+        <div class="how-beat">
+          <h3>Accept the premise.</h3>
+          <p>AI is already in your building. Let's start there, with what's actually in the room, and build from it.</p>
+        </div>
+
+        <div class="how-beat">
+          <h3>Yes, and.</h3>
+          <p>Every school already has a game going: a teacher's clever workaround, a team's shortcut. Let's find it and build on it. Often the answer already lives in your tech stack, and the real work is the workflow around it. When a new tool joins the scene, it's because it makes your people look good. That's how one school said yes to Playlab: within ten weeks, a teacher-built app was running in four classes.</p>
+        </div>
+
+        <div class="how-beat">
+          <h3>Play first.</h3>
+          <p>We learn a tool best by playing with it. So the Playground comes first, and the guidelines grow from what we discover there.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
